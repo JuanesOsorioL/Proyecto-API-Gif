@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../sass/otro.scss"
+    ],
+    "names": [],
+    "file": "otro.css"
+}

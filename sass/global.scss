@@ -1,0 +1,1526 @@
+
+//  ------  ------  ------  ------  ------   variables   ------  ------  ------  ------  ------
+$dark: #37383C;
+$blanco: #FFFFFF ;
+$morado: #572EE5;
+$negro:#000000;
+$verde: #50E3C2;
+$blanco_gifos: #F3F5F8 ;
+$negro_gifos:#222326;
+
+
+//  ------  ------  ------  ------  ------  fuente    ------  ------  ------  ------  ------
+@font-face 
+{
+    font-family: "Montserrat-Bold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face 
+{
+    font-family: "Montserrat-Medium";
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: "Roboto-Regular";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face 
+{
+    font-family: "Roboto-Bold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+//  ------  ------  ------  ------  ------   columnas   ------  ------  ------  ------  ------
+.colum-1{
+    width: 8.3%;
+}
+.colum-4{
+    width: calc( 8.3% * 4);
+}
+.colum-6{
+    width: calc( 8.3% * 6);
+}
+.colum-12{
+    width: calc( 8.3% * 12);
+}
+//  ------  ------  ------  ------  ------  body    ------  ------  ------  ------  ------
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $blanco;
+
+    
+    &.black{
+        background-color: $dark;
+    }
+}
+//  ------  ------  ------  ------  ------  ocultar    ------  ------  ------  ------  ------
+.ocultar{
+    display: none;
+}
+//  ------  ------  ------  ------  ------  header    ------  ------  ------  ------  ------
+
+header{
+    border-top:5px solid $morado;
+    padding: 29px 26px 17.2px 22px ;
+    background-color: $blanco;
+    transition: .3s ease all;
+
+    body.black & {
+        border-top:5px solid $negro;
+        background-color: $dark;
+    }
+}
+
+.row-header-mov{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#img-logo{
+    width: 48.8px;
+    height: 48.8px;
+}
+.fa{
+    float: right;
+    padding: 18px 0px 16.8px 0px ;
+    font: normal normal normal 20px/1 FontAwesome;
+    color:$morado;
+    transition: .3s ease all;
+
+    body.black & {
+        color: $blanco;
+    }
+}
+
+#menu{
+    background-color: $morado;
+    position: absolute;
+    opacity: 85%;
+    width: 100vw;
+    height: 456px;
+    margin-left: -22px;
+    margin-top: 66px;
+    text-align: center;
+    color: $blanco;
+    transition: .3s ease all;
+
+        body.black & {
+            background-color: $negro;
+        }
+
+
+    ul{
+        padding-top: 19px;
+        list-style-type: none;
+        margin-block-start:  0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        li{
+            padding: 13px 0px 11px 0px;
+            font-family: "Montserrat-Bold";
+            font-size: 15px;
+            a {
+                color: $blanco;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    span {
+        color: $blanco;
+    }
+    }
+
+}
+//  ------  ------  ------  ------  ------   titulo principal   ------  ------  ------  ------  ------
+
+.titulo-principal{
+    background-color: $blanco;
+   // transition: .3s ease all;
+
+    body.black & {
+        background-color: $dark;
+    }
+
+    h1{
+        font-family: "Montserrat-Bold";
+        line-height: 33px;
+        text-align: center;
+        font-size: 25px;
+        color: $morado;
+        padding: 7px 44px 31px 45px ;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        transition: .3s ease all;
+
+        body.black & {
+            color: $blanco;
+        }
+        span{
+            color: $verde;
+        }
+    }
+}
+
+//  ------  ------  ------  ------  ------  imagen    ------  ------  ------  ------  ------
+
+.ilustra-header {
+    height: 130px;
+    background-color: $blanco;
+    text-align: center;
+    //transition: .3s ease all;
+
+    body.black & {
+        background-color: $dark;
+    }
+
+    img{
+        width: 273px;
+        height: 130px;
+       // padding: 0 51px 0 51px;
+    }
+
+}
+//------  ------  ------  ------  buscar    ------  ------  ------  ------  ------
+
+
+
+.buscar{
+    background-color: $blanco;
+    padding: 0 21px 31px 20px;
+    //transition: .3s ease all;
+
+    body.black & {
+        background-color: $dark;
+    }
+
+    #barraBuscar{
+        width: 334px;
+        height: 50px;
+        margin: auto;
+        background: $blanco;
+        border: 1px solid $morado;
+        border-radius: 27px;
+ 
+        body.black & {
+            background-color: $dark;
+            border: 1px solid $blanco;
+        }
+
+        #buscaractivo{
+            float:none;
+            padding: 17px 0px 0px 7px;
+            font: normal normal normal 22px/1 FontAwesome;
+            color:#9CAFC3;
+            display:none;
+        }
+
+        input{
+    
+            width: 215px;
+            height: 22px;
+            padding: 0;
+            border: 0;
+            margin: 15px 22px 13px 0px;
+            margin-left: 55px;
+           // margin: 15px 22px 13px 27px;
+            //margin: 15px 22px 13px 55px;
+            font-family: "Roboto-Regular";
+            font-size: 16px;
+            color: #000000;
+            text-align: left;
+
+            body.black & {
+                background-color: $dark;
+            }
+        }
+        .autocompletado{
+           // display: block;
+
+            .fa{
+                float:none;
+            }
+            i{
+                color:#9CAFC3;
+                padding: 9px 0px 0px 12px;
+               display: block;
+               font: normal normal normal 22px/1 FontAwesome;
+               // float: left;
+                span{
+                    padding: 9px 0px 0px 12px;
+                   // display: block;
+                }
+            }
+
+        }
+    }
+
+    #buscar{
+        padding: 17px 17px 0px 0px;
+        font: normal normal normal 22px/1 FontAwesome;
+        transition: .3s ease all;
+
+        body.black & {
+            color: $blanco;
+        }
+    }
+}
+
+//  ------  ------  ------  ------  ------  titulo trending    ------  ------  ------  ------  ------
+
+.titulo-trending{
+    width: 236px;
+    height: 77px;
+    text-align: center;
+    margin-top: 31px;
+    padding: 0px 69px 45px 70px;
+    line-height: 25px;
+    color: $morado;
+    margin: auto;
+
+    body.black & {
+        background-color: $dark;
+        color: $blanco;
+    }
+    h1{
+        padding-bottom: 2px;
+        font-family: "Montserrat-Bold";
+        font-size: 16px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+
+    h2{
+        font-family: "Montserrat-Medium";
+        font-size: 14px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+}
+
+//  ------  ------  ------  ------  ------  titulo gifos    ------  ------  ------  ------  ------
+
+
+.trending-gifos{
+    background-color: $blanco_gifos;
+    width: 100vw;
+    padding-top: 46px;
+    padding-bottom: 32px;
+    transition: .3s ease all;
+
+    body.black & {
+        background-color: $negro_gifos;
+    }
+
+    div{
+        width: 333px;
+        height: 83px;
+        margin: auto;
+        color: $morado;
+        text-align: center;
+        transition: .3s ease all;
+
+        body.black & {
+            color: $blanco;
+        }
+        h1{
+            font-family: "Montserrat-Bold";
+            font-size: 20px;  
+            line-height: 30px;
+            padding-bottom: 7px;
+            
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+        }
+        h2{
+            font-family: "Roboto-Regular";
+            font-size: 16px;
+            line-height: 23px;
+            color: $negro;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            body.black & {
+                color: $blanco;
+            }
+        }
+    }
+
+}
+
+//  ------  ------  ------  ------  ------  gifos    ------  ------  ------  ------  ------
+.trading{
+    width: 100vw;
+    height: 301px; 
+    background-color: $blanco_gifos;
+    overflow-y: hidden;
+    overflow-x:scroll;
+    transition: .3s ease all;
+
+    body.black & {
+        background-color: $negro_gifos;
+    }
+   .containerEscritorioTrendind{
+
+
+  
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            padding-inline-start: 0px;
+            li{
+                width: 243px;
+                height: 187px;
+                position: relative;
+                margin-left: 22px;
+
+                &:hover label {
+                    visibility: visible;
+                }
+
+                &:hover .botones{
+                    visibility: visible;
+                }
+
+                &:hover .informacion-gifo{
+                    visibility: visible;
+                }
+
+                img{
+                    width: 243px;
+                    height: 187px;
+                    
+                }
+                label{
+                
+                    width: 243px;
+                    height: 187px;
+                    bottom: 0px;
+                    left: 0px;
+                    position: absolute; 
+                    background-color: $morado;
+                    opacity: 0.6;
+                    visibility: hidden;
+                }
+
+                .botones{
+                    top: 6px;
+                    right:6px;
+                    position: absolute;
+                    visibility: hidden;
+                    display: inline;
+
+                    img{
+                        opacity: 0.7;
+                        background: $blanco;
+                        border-radius: 6px;
+                        width: 18px;
+                        height: 15.9px;
+                        padding: 6px 6px;
+                        margin-left: 6px;
+
+                        &:hover{
+                            opacity: 1;
+                            background: $blanco
+                        }
+                    }
+
+                }
+                .informacion-gifo{
+                    width: 238px;
+                    position: absolute;
+                    visibility: hidden;
+                    color: $blanco;
+                    .user{
+                        font-family: "Roboto-Regular";
+                        font-size: 15px;
+                        position: absolute;
+                        bottom: -75px;
+                        left: -116px;
+                    }
+                    .titulo{
+                        font-family: "Roboto-Bold";
+                        font-size: 16px;
+                        position: absolute;
+                        bottom: -139px;
+                        left: -125px;
+                        width: 236px;
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//  ------  ------  ------  ------  ------  footer    ------  ------  ------  ------  ------
+
+footer{
+
+    text-align: center;
+    padding: 47px 40px 23px 40px;
+   // padding: 47px 72px 23px 72px;
+    border-bottom:5px solid $morado;
+    transition: .3s ease all;
+    color: $negro;
+    body.black & {
+        background-color: $dark;
+        border-bottom:5px solid $negro;
+        color: $blanco;
+    }
+
+
+    .contendor-footer{
+
+        .compartir-redes-footer{
+    
+            h2{
+                font-family: "Roboto-Regular";
+        font-size: 15px;
+        letter-spacing: 0;
+        padding-bottom: 22px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px; 
+            }
+       
+    
+            .redes-footer{
+                margin:auto;
+                .fa{
+                    font: normal normal normal 23px/1 FontAwesome;
+                    float: none;
+                    margin-left: 18px;
+                   padding:none;
+                }
+        
+                .fa-instagram, .fa-twitter, .fa-facebook{
+                    color: #CDD6E0  ;
+                   &:hover{
+                    color: $morado;
+                  
+                    }
+    
+            }
+
+            .iz{
+                padding-left: 0px;
+            }
+            
+
+        }
+    }
+   
+    .copi-footer{
+        h2{
+            padding-top: 46px;
+            font-family: "Roboto-Regular";
+            font-size: 15px; 
+            line-height: 20px;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+    
+    }
+}
+}
+
+
+
+/*
+
+footer{
+    text-align: center;
+    padding: 47px 72px 23px 72px;
+    border-bottom:5px solid $morado;
+    transition: .3s ease all;
+    color: $negro;
+    body.black & {
+        background-color: $dark;
+        border-bottom:5px solid $negro;
+        color: $blanco;
+    }
+    h2{
+        font-family: "Roboto-Regular";
+        font-size: 15px;
+        letter-spacing: 0;
+        padding-bottom: 22px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px; 
+    }
+    div{
+       margin:auto;
+        .fa{
+            font: normal normal normal 23px/1 FontAwesome;
+            float: none;
+            margin-left: 18px;
+           padding:none;
+        }
+
+        .fa-instagram, .fa-twitter, .fa-facebook{
+            color: #CDD6E0  ;
+           &:hover{
+            color: $morado;
+          
+            }
+        }
+
+
+        .iz{
+            padding-left: 0px;
+        }
+    }
+    h2{
+        padding-top: 46px;
+        font-family: "Roboto-Regular";
+        font-size: 15px; 
+        line-height: 20px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+}
+
+*/
+//  ------  ------  ------  ------  ------  index favoritos    ------  ------  ------  ------  ------
+
+.container-favoritos{
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    img{
+        width: 28px;
+        height: 21px;
+    }
+    h1{
+        font-family: "Montserrat-Bold";
+        font-size: 20px;
+        color: $morado;
+        line-height: 30px;
+
+        body.black & {
+            color: $blanco;
+        }
+    }
+
+}
+
+
+
+
+//  ------  ------  ------  ------  ------      ------  ------  ------  ------  ------
+.containerGrid{
+    width: 100vw;
+ //   height: 940px;
+// height:400px;
+
+//height: 1093px;;
+
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 21px 0px 21px;
+
+        div{
+            margin: auto;
+            padding-bottom: 6px;
+           // padding-bottom: 21px;
+            //padding: 0px 0px 0px 0px;
+
+            .container{
+               position: relative;
+                width: 156px;
+                height: 120px;
+
+               
+                img{
+                    width: 156px;
+                    height: 120px;
+                    
+                }
+               &:hover label {
+                    visibility: visible;
+                 }
+                 &:hover .botones{
+                    visibility: visible;
+                 }
+  
+                 &:hover .informacion-gifo{
+                  visibility: visible;
+               }
+        
+                label{
+                    width: 156px;
+                    height: 120px;
+                  // bottom: 0px;
+                    left: 0px;
+                   position: absolute; 
+                    background-color: $morado;
+                    opacity: 0.6;
+                   visibility: hidden;
+                }
+
+
+                .botones{
+                    top: 6px;
+                    right:6px;
+                    position: absolute;
+                   visibility: hidden;
+                    display: inline;
+    
+                    img{
+                        opacity: 0.7;
+                        background: $blanco;
+                        border-radius: 6px;
+                        width: 18px;
+                        height: 15.9px;
+                        padding: 6px 6px;
+                        margin-left: 6px;
+    
+                        &:hover{
+                            opacity: 1;
+                            background: $blanco
+                        }
+                    }
+                }
+                .informacion-gifo{
+                    width: 106px;
+                    position: absolute;
+                    visibility: hidden;
+                    color: $blanco;
+                    .user{
+                        font-family: "Roboto-Regular";
+                        font-size: 15px;
+                        position: absolute;
+                        bottom: -19px;
+                        left: -37px;
+                    }
+                    .titulo{
+                        font-family: "Roboto-Bold";
+                        font-size: 12px;
+                        position: absolute;
+                        bottom: -59px;
+                        left: -39px;
+                        width: 154px;
+                    }
+                }
+            }
+        }
+    }
+
+    .containerPaginacion{
+        text-align: center;
+        div{ 
+            .fa{
+                float:none;
+            }
+
+            list-style-type: none;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            padding-inline-start: 0px;
+            label{
+                margin: 11px 10px 0px 10px;
+                padding: 5px 10px 5px 10px;
+               border-radius: 100%;
+               opacity: 0.4;
+
+               //background-color: $morado;
+               body.black & {
+                      
+                //background-color: $blanco;
+               
+            }
+
+                &:hover{
+                    background-color: $morado;
+                    opacity: 1;
+                    color:$blanco;
+                    body.black & {
+                      
+                        background-color: $blanco;
+                        color:$negro
+                    }
+                }
+                span{
+                    color:#9CAFC3;
+                    opacity: 1;
+                    font-size: 18px;
+
+                    body.black & {
+                      
+
+                       // color:$blanco;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
+
+.contenedorVacio{
+    width: 100vw;
+    text-align: center;
+    
+    .img_vacio{
+        width: 150px;
+        height: 151px;
+    }
+
+    h2{
+        font-family: "Montserrat-Bold";
+        font-size: 22px;
+        color: $verde;
+        line-height: 33px;
+        margin-block-start: 0px;
+    margin-block-end: 0px;
+    }
+}
+
+//  ------  ------  ------  ------  ------  img max    ------  ------  ------  ------  ------
+
+.maximg{
+    position: fixed;
+    width: 100vw;
+   // height: 172vw;
+   height: 194%;
+    background: rgba(255, 255, 255, 0.9);
+    padding-top: 10%;
+    text-align: right;
+    top:0px;
+    
+
+
+
+    .containerMaxImg{
+        margin: auto;
+       //padding: 0 7% 0 8%;
+        position: relative;
+        width: 318px;
+        padding: 0 28px 0 28px;
+
+        .fa{
+            position: relative;
+             font: normal normal normal 25px/1 FontAwesome;
+             float:none;
+             color: $morado;
+         }
+
+        img{
+            width: 318px;
+            height: 245px;
+            opacity: 1;
+        }
+
+        .row{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .col-6{
+                width: calc( 8.3% * 6);
+                img{
+                    width: 36px;
+                    height: 36px;
+                    opacity: 0.7;
+                        
+                    &:hover{
+                        opacity: 1;
+                      //  background: $blanco
+                    }
+
+                }
+
+                .user{
+                    display:block;
+                    font-family: "Roboto-Regular";
+                    font-size: 15px;
+                    text-align: left;
+                }
+                .titulo{
+                    
+                    font-family: "Roboto-Bold";
+                    font-size: 12px;
+                    display:block;
+                    text-align: left;
+                
+                }
+            }
+        }
+    }
+    
+}
+
+
+//  ------  ------  ------  ------  ------  buscar    ------  ------  ------  ------  ------
+.contenedorBusqueda{
+    width: 100vw;
+    height: 1163px;
+    display:none;
+
+    h1{
+        font-family: "Montserrat-Bold";
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 40px;
+
+        body.black & {
+             color:$blanco;
+         }
+    }
+    .row{
+        padding: 0px 21px 0px 21px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+
+        .col-6{
+            margin: auto;
+            padding-bottom: 10px;
+           ///////////////////////////////////////// width: calc( 8.3% * 6);
+            .container{
+                position: relative;
+                width: 156px;
+                height: 120px;
+                margin: auto;
+
+                &:hover label {
+                    visibility: visible;
+                 }
+                 &:hover .botones{
+                    visibility: visible;
+                 }
+  
+                 &:hover .informacion-gifo{
+                  visibility: visible;
+               }
+
+                .img-gif{
+
+                        width: 156px;
+                        height: 120px;
+                }
+                
+                label{
+                    width: 156px;
+                    height: 120px;
+                  // bottom: 0px;
+                    left: 0px;
+                   position: absolute; 
+                    background-color: $morado;
+                    opacity: 0.6;
+                   visibility: hidden;
+                }
+
+                .botones{
+
+                    top: 6px;
+                    right: 6px;
+                    position: absolute;
+                    visibility: hidden;
+                    display: inline;
+                
+
+                    img{
+                        opacity: 0.7;
+                        background: $blanco;
+                        border-radius: 6px;
+                        width: 10px;
+                        height: 10px;
+                        padding: 6px 6px;
+                        margin-left: 6px;
+    
+                        &:hover{
+                            opacity: 1;
+                            background: $blanco
+                        }
+                    }
+                   
+                }
+                .informacion-gifo{
+                    width: 106px;
+                    position: absolute;
+                    visibility: hidden;
+                    color: $blanco;
+                    .user{
+                        font-family: "Roboto-Regular";
+                        font-size: 15px;
+                        position: absolute;
+                        bottom: -24px;
+                        left: -59px;
+                    }
+                    .titulo{
+                        font-family: "Roboto-Bold";
+                        font-size: 12px;
+                        position: absolute;
+                        bottom: -78px;
+                        left: -63px;
+                        width: 151px;
+                    }
+                }
+            }
+        } 
+    }
+
+    .containerVermas{
+        color:#572EE5;
+        background-color: #FFFFFF;
+        transition: .3s ease all;
+        margin-top: 78px;
+        margin-bottom: 78px;
+        
+        body.black & {
+            background-color: #37383C;
+            color:#FFFFFF;
+        }
+
+        .boton{
+            margin: auto;
+            text-align: center;
+            width: 127px;
+            height: 31px;
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            padding-top: 17px;
+            transition: .3s ease all;
+
+            body.black & {
+                border: 1px solid #FFFFFF;
+                color:#FFFFFF;
+
+                &:hover{
+                    color:#000000;
+                      background-color:#FFFFFF;
+                  }
+            }
+
+
+            &:hover{
+              color:#FFFFFF;
+                background-color: #572EE5;
+            }
+
+
+
+            .vermas{
+                margin-top: 10px;
+            }
+        }
+
+
+    }
+}
+
+//  ------  ------  ------  ------  ------   320-374   ------  ------  ------  ------  ------
+
+@media (max-width: 374px) {
+
+    .buscar{
+        padding: 0;
+        padding-bottom: 30px;
+        #barraBuscar{
+            width: 300px;
+    
+            input{
+                width: 183px;
+            }
+        }
+    }
+    ///////////////
+    .titulo-trending{
+        padding: 0;
+    }
+    ///////////
+    .trending-gifos{
+        div{
+            width: 100vw;
+        }
+    }
+    /////////
+    .containerGrid{
+        .row{
+    
+            .col-6{
+                padding-bottom: 0px;
+            }
+        }
+    /////////
+        .containerPaginacion{
+            div{
+                label{
+                    padding: 2px 5px 2px 5px;
+                }
+            }
+        }
+    }
+    ////////
+    .maximg{
+        .containerMaxImg{
+            width: 264px;
+            img{
+                width: 263px;
+                height: 183px;
+            }
+        }
+    }
+    /////////favoritos
+    .containerGrid{
+            .row{
+                padding: 0px 1px 0px 1px;
+                div{
+                    .container{
+                    height: 117px;  
+                    }
+                }
+            }
+        }
+    
+    ////////////busqueda
+    .busqueda{
+        .contenedorBusqueda{
+            .row{
+                padding: 0 1px 0px 1px;
+                .col-6{
+                    padding-bottom: 4px;
+                    .container{
+                        width: 156px;
+                        height: 120px;
+                        .img-gif{
+                            width: 156px;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    }
+
+        //  ------  ------  ------  ------  ------ 1440px     ------  ------  ------  ------  ------
+        @media (min-width: 1440px){
+    
+            #img-logo {
+                width: 59.1px;
+                height: 59.1px;
+                margin-left: 134px;
+         }
+        //////////
+        .titulo-principal{
+            padding: 0px 253px 0px 253px;
+        
+            h1{
+               padding: 76px 154px 24px 154px;
+                font-size: 35px;
+                line-height: 50px;
+            }
+        }
+        ////////////
+        .ilustra-header {
+            height: 191px;
+            img{
+                width: 399px;
+                height: 190px;
+            }
+        }
+        ////////////////////////
+        .buscar{
+        
+            padding: 0 21px 73px 20px;
+            #barraBuscar{
+                width: 551px;
+        
+            }
+         
+        }
+        //////////////
+        .titulo-trending{
+            width: 426px;
+            h1{
+                font-size: 18px;
+            }
+            h2{
+                font-size: 16px;
+            }
+        }
+        ////////////////////////
+        
+        .busqueda{
+            .contenedorBusqueda{
+                .tituloBusqueda{
+                    font-size: 35px;
+                   
+                }
+                .row{
+                    padding: 0 156px 0px 156px;
+                    .col-6{
+                       
+                        padding-bottom: 27px;
+                        .container{
+                            width: 260px;
+                            height: 200px;
+                            .img-gif{
+                                width: 260px;
+                                height: 200px;
+                            }
+                            label{
+                                width: 260px;
+                                height: 200px;
+                            }
+                            .botones{
+                                img{
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                                .informacion-gifo{
+                                    .user{
+                                        font-size: 15px;
+                                        bottom: -70px;
+                                        left: -77px;
+                                    }
+                                    .titulo{
+                                        font-size: 16px;
+                                        bottom: -132px;
+                                        left: -93px;
+                                        width: 206px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /////////
+        .trending-gifos{
+            div{
+                width: 465px;
+                h1{
+                    font-size: 25px;
+                    line-height: 30px;
+                }
+                h2{
+                    font-size: 18px;
+                }
+            }
+        }
+        //////////////////////
+        .trading{
+           // height: 453px;
+            .containerEscritorioTrendind{
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+          
+
+                .containerizquierda{
+                   margin: auto;
+                    width: calc( 8.3% * 1);
+                    .cuadroizquierda{
+                        width: 40px;
+                        height: 40px;
+
+                        border:5px solid $morado;
+                        background-color: $blanco_gifos;
+                        float: right;
+
+                        &:hover{
+                            background-color: $morado;
+                            & i{
+                                color: $blanco;
+                            }
+                        }
+                    body.black & {
+                              
+                        border:5px solid $blanco_gifos;
+                        background-color: $dark;
+
+                        &:hover{
+                            background-color: $blanco_gifos;
+                            & i{
+                                color: $dark;
+                            }
+                       }
+                    }
+
+                       i{
+                        color:$morado;
+                        margin: auto;
+                        float: none;
+                        padding: 10px 0px 0px 10px;
+
+                        body.black & {
+                            color:$blanco;
+                           }
+                       }
+                    }
+                }
+
+                ul{
+                    width: calc( 8.3% * 10);
+                    height: 277px;
+                    li{
+                        width: 360px;
+                        margin-left: 27px;
+                        .img-gif{
+                            width: 357px;
+                            height: 275px;
+                        }
+                        label{
+                            width: 357px;
+                            height: 275px;
+                            bottom: -89px;
+                        }
+                        .botones{
+                            img{
+                                width: 32px;
+                                height: 32px;
+                            }
+            
+                            .informacion-gifo{
+            
+                                .user{
+                                    bottom: -101px;
+                                    left: -161px;
+                                }
+                                .titulo{
+                                    bottom: -199px;
+                                    left: -182px;
+                                    width: 314px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .containerderecha{
+                    margin: auto;
+                    width: calc( 8.3% * 1);
+
+                    .cuadroderecha{
+                        width: 40px;
+                        height: 40px;
+                        border:5px solid $morado;
+                        background-color: $blanco_gifos;
+
+                        &:hover{
+                            background-color: $morado;
+                            & i{
+                                color: $blanco;
+                            }
+                        }
+                    body.black & {
+                              
+                        border:5px solid $blanco_gifos;
+                        background-color: $dark;
+
+                        &:hover{
+                            background-color: $blanco_gifos;
+                            & i{
+                                color: $dark;
+                            }
+                       }
+                    }
+
+                        i{
+                            color:$morado;
+                            margin: auto;
+                            float: none;
+                            padding: 10px 0px 0px 14px;
+                            body.black & {
+                                color:$blanco;
+                               }
+                           }
+                       
+                    }
+                }
+
+            }
+        }
+
+////////////////////////
+
+            .row-header-mov{
+        
+                .colum-6{
+                    #menu-open{
+                        display:none;
+                    }
+                    #menu-close{
+                        display:none;
+                    }
+                }
+                #menu{
+                    right: 16px;
+                    display: initial;
+                    position: absolute;
+                    color: #572EE5;
+                    background-color: #FFFFFF;
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    width: 445px;
+                    height: 38px;
+        
+        
+                    body.black & {
+                      
+                        background-color: $dark;
+                        color: $blanco;
+              
+        
+                    }
+        
+                    ul{
+                        padding-top: 0px;
+                        display: flex;
+                       // display:inline;
+                       
+                       span{
+                        display:none;
+                       }
+        
+        
+                       #diurno{
+                       // display:none;
+        
+                       }
+                       li{
+                       // display:inline;
+                        padding:10px;
+                           a{
+                            color: $morado;
+        
+                            body.black & {
+                      
+                                color: $blanco;
+                      
+                
+                            }
+        
+                           }
+                       }
+                    }
+                }
+            }
+        
+            /////////////////////
+            footer{
+                padding: 0;
+                height: 77px;
+                padding-top: 39px;
+                //text-align: none;
+                .contendor-footer{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                   
+                  
+                    .compartir-redes-footer{
+                        width: calc( 8.3% * 6);
+                       
+                      
+                        h2{
+                            display: inline;
+                            padding-bottom: 0px;
+                        }
+            
+                        .redes-footer{
+                            display: inline;
+                          
+                        }
+                    }
+                        .copi-footer{
+                            width: calc( 8.3% * 6);
+                          
+                            h2{
+                                padding-top: 19px;
+                            }
+                        }
+                    
+                }
+            }
+           
+            
+            ////favoritos
+        
+        
+        
+            .container-favoritos{
+                h1{
+                    font-size: 25px;
+               }
+            }
+        
+            .containerGrid{
+                width: 100vw;
+                .row{
+                   padding: 0px 156px 0px 127px;
+                    div{
+                        padding-bottom: 35px;
+                        .container{
+                            width: 260px;
+                            height: 166px;
+                            img{
+                                width: 260px;
+                                height: 200px;  
+                            }
+                            label{
+                                width: 260px;
+                                height: 200px;
+                                }
+                            .botones{
+                                img{
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+                            .informacion-gifo{
+                                .user{
+                                    font-family: "Roboto-Regular";
+                                    font-size: 15px;
+                                    bottom: -29px;
+                                    left: -76px;
+                                }
+                                .titulo{
+                                    font-family: "Roboto-Bold";
+                                    font-size: 16px;
+                                    bottom: -94px;
+                                    left: -96px;
+                                    width: 243px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+   
+//  ------  ------  ------  ------  ------      ------  ------  ------  ------  ------
+
+//  ------  ------  ------  ------  ------      ------  ------  ------  ------  ------
+
+//  ------  ------  ------  ------  ------      ------  ------  ------  ------  ------
+
+//  ------  ------  ------  ------  ------      ------  ------  ------  ------  ------
